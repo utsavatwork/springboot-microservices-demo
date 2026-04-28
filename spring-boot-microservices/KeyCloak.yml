@@ -1,0 +1,29 @@
+info:
+  name: KeyCloak
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8181/realms/microservices-demo/protocol/openid-connect/token
+  headers:
+    - name: Content-Type
+      value: application/x-www-form-urlencoded
+  body:
+    type: form-urlencoded
+    data:
+      - name: grant_type
+        value: password
+      - name: client_id
+        value: api-gateway
+      - name: username
+        value: utsav
+      - name: password
+        value: password
+  auth: inherit
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
