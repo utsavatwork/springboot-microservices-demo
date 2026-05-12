@@ -14,7 +14,13 @@ public class PaymentDoneEventListener {
     this.orderService = orderService;
   }
 
-  @KafkaListener(topics = "payment-done", groupId = "order-service-group")
+  @KafkaListener(
+    topics = "payment-done",
+    groupId = "order-service-group",
+    properties = {
+      "spring.json.value.default.type=com.utsav.order_service.event.PaymentDoneEvent"
+    }
+  )
   public void handlePaymentDoneEvent(PaymentDoneEvent event) {
     orderService.confirmOrder(event);
   }

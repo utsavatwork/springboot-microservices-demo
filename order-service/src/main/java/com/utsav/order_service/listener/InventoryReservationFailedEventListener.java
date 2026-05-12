@@ -14,7 +14,13 @@ public class InventoryReservationFailedEventListener {
     this.orderService = orderService;
   }
 
-  @KafkaListener(topics = "inventory-reservation-failed", groupId = "order-service-group")
+  @KafkaListener(
+    topics = "inventory-reservation-failed",
+    groupId = "order-service-group",
+    properties = {
+      "spring.json.value.default.type=com.utsav.order_service.event.InventoryReservationFailedEvent"
+    }
+  )
   public void handlePaymentDoneEvent(InventoryReservationFailedEvent event) {
     orderService.denyOrder(event);
   }

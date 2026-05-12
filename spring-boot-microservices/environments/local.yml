@@ -1,0 +1,24 @@
+name: local
+variables:
+  - name: baseUrl
+    value: http://localhost:8090
+  - name: productServiceUrl
+    value: http://localhost:8083
+  - name: orderServiceUrl
+    value: http://localhost:8080
+  - name: inventoryServiceUrl
+    value: http://localhost:8081
+  - name: paymentServiceUrl
+    value: http://localhost:8082
+  - name: keycloakUrl
+    value: http://localhost:8181
+  - name: realm
+    value: microservices-demo
+  - name: clientId
+    value: api-gateway
+  - name: username
+    value: utsav
+  - name: password
+    value: password
+  - name: token
+    value: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmdE5acGdMeGlzeE1rTzVJZW5tNmczSllSRlhtamtDZ0tPM0JaM3BpdGRzIn0.eyJleHAiOjE3Nzg1NzMyNjEsImlhdCI6MTc3ODU3Mjk2MSwianRpIjoib25ydHJvOmExYzExODlmLTA0NTEtNDljOC1iNzNhLThmYTc2OTFmNmFhZSIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODE4MS9yZWFsbXMvbWljcm9zZXJ2aWNlcy1kZW1vIiwic3ViIjoiMTgyNmYyYzYtMzU1NS00OTkyLTg1YWUtN2YzMDMwYTAzN2I4IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYXBpLWdhdGV3YXkiLCJzaWQiOiJiMTQ3NDFjMy03NTU2LTQ4NGUtYWYxZi02NzE3ZjY1YzdiMDAiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6ODA5MCIsImh0dHA6Ly9sb2NhbGhvc3Q6NTE3MyJdLCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IlV0c2F2IiwicHJlZmVycmVkX3VzZXJuYW1lIjoidXRzYXYiLCJnaXZlbl9uYW1lIjoiVXRzYXYifQ.IRFdl_u9stnXOrEc2_2wM_QUtNhdtcDjbVs5mGNJnyK7Nhki3Mb54XM9smJqyImE48xn9UXSUPKXwQRnQO0jBubsRDt-80O1Ngzph2umNnOiD5NibxUPkwyONw55RFqU5mk8JJZzIWDwdncy5kBFltUiCGYeSP_2vRyvFHOnMqYqwrTtWsvbkm_TVpAGUs4TmgViR8qxquCZp6oqEzkpL4DiT2DK38HSp9N1v06vS8n9_w1mMa2d1Pz9HpjYt8IBue-1ZpY5FLMAi_QJ2kbaTpxctkOchTlol-cr64YMsKrvH3jD7qBRlteqrdD0U2wupQgSed9_JchZyMvFkLBwSg

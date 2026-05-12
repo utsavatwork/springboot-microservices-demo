@@ -1,0 +1,11 @@
+.git
+.gitignore
+**/.gradle
+**/build
+**/bin
+**/out
+**/.DS_Store
+**/node_modules
+**/dist
+*.zip
+

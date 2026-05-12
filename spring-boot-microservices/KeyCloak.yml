@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: http://localhost:8181/realms/microservices-demo/protocol/openid-connect/token
+  url: "{{keycloakUrl}}/realms/{{realm}}/protocol/openid-connect/token"
   headers:
     - name: Content-Type
       value: application/x-www-form-urlencoded

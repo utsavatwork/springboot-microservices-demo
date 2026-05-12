@@ -17,6 +17,17 @@ public class GlobalExceptionHandler {
     return buildResponse(HttpStatus.NOT_FOUND, ex.getMessage(), request.getRequestURI());
   }
 
+  @ExceptionHandler(ProductNotFoundException.class)
+  public ResponseEntity<ApiErrorResponse> productNotFoundException(ProductNotFoundException ex, HttpServletRequest request) {
+    return buildResponse(HttpStatus.NOT_FOUND, ex.getMessage(), request.getRequestURI());
+  }
+
+  @ExceptionHandler(ProductServiceUnavailableException.class)
+  public ResponseEntity<ApiErrorResponse> productServiceUnavailableException(
+      ProductServiceUnavailableException ex, HttpServletRequest request) {
+    return buildResponse(HttpStatus.SERVICE_UNAVAILABLE, ex.getMessage(), request.getRequestURI());
+  }
+
   private ResponseEntity<ApiErrorResponse> buildResponse(
       HttpStatus status, String message, String path) {
     ApiErrorResponse response = 

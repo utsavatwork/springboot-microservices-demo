@@ -1,0 +1,28 @@
+info:
+  name: Get All Orders
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{baseUrl}}/orders"
+  headers:
+    - name: Authorization
+      value: Bearer {{token}}
+  params:
+    - name: Authorization
+      value: ""
+      type: query
+      disabled: true
+  auth: inherit
+
+runtime:
+  variables:
+    - name: token
+      value: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmdE5acGdMeGlzeE1rTzVJZW5tNmczSllSRlhtamtDZ0tPM0JaM3BpdGRzIn0.eyJleHAiOjE3Nzg1NzMwMjAsImlhdCI6MTc3ODU3MjcyMCwianRpIjoib25ydHJvOmU5MzA2MzUwLWY4OGYtNDA5Yy1hYzgyLWFlMmUyYjc4MDlkNSIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODE4MS9yZWFsbXMvbWljcm9zZXJ2aWNlcy1kZW1vIiwic3ViIjoiMTgyNmYyYzYtMzU1NS00OTkyLTg1YWUtN2YzMDMwYTAzN2I4IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYXBpLWdhdGV3YXkiLCJzaWQiOiI0Zjc2MTVhMC04OTIxLTQ2ZmUtYTVjZi0wYzM4MjYwOGExMWMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6ODA5MCIsImh0dHA6Ly9sb2NhbGhvc3Q6NTE3MyJdLCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IlV0c2F2IiwicHJlZmVycmVkX3VzZXJuYW1lIjoidXRzYXYiLCJnaXZlbl9uYW1lIjoiVXRzYXYifQ.GinUsTd8MunCFYBWcCE1NTDiT2LdsB_WnUvrwv83TRDpYw3i4JZ8tf7ruiKwmbXr00zny8DP3rM6qBuOv1Z4e0yKIm09oPovf449-d1-boaSHmh9YwZBSM8ki9n9dyNW220s2GIB_AGmsS7ePi1pxqnz7Tn1RDzAMV3o86ddEgCi0SvKXJAnnO0YPXOq-Qi3GxrObHWfw_Lw8z8Aqys-93LCDiRhe66i8InHyinzcGVCjCSCW6mA6Gs7gbF6hFmz8Ef3LfsQdf_zcPgtwpYyyUP2nd3IpnCKNb4rBAO0Czkfl2A0iw0qBubqjGqmC0TVrANcmcyfEewg1-f0sl-RmQ
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
